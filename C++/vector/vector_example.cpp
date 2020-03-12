@@ -16,7 +16,7 @@ int main()
 	for (auto iter = A.begin(); iter != A.end(); ++iter)
 		*iter = 1;
 	
-	// define a vector B with length 5, all elements are initialized with 5.
+	// define a vector B with length 5, all elements are initialized with 3.
 	vector<int> B(5, 3);
 	
 	// add 100 2 at the end of Vector B.
