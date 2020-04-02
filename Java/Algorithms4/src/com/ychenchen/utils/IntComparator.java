@@ -3,9 +3,9 @@ package com.ychenchen.utils;
 import java.util.Comparator;
 
 /**
+ * {@code IntComparator} int类型数据的比较器.
  * @author alexis.yang
- * @date 2020/4/1 6:00 PM
- * @copyright www.ychenchen.com
+ * @since  2020/4/2 10:51 AM
  */
 public class IntComparator implements Comparator<Integer> {
 

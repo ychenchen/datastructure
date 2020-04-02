@@ -1,11 +1,19 @@
 package com.ychenchen.sort;
 
-import java.util.Random;
-
 /**
+ * {code KnuthShuffle}
+ * 对输入字符串采用the Knuth (or Fisher-Yates) shuffling algorithm.进行洗牌.
+ * 在保证Math.random()产生0到1之间独立均匀分布数字的前提下, 该算法可以保证结果序列
+ * 均匀随机排列.
+ *
+ *  % more cardsUnicode.txt
+ *  2♣ 3♣ 4♣ 5♣ 6♣ 7♣ 8♣ 9♣ 10♣ J♣ Q♣ K♣ A♣
+ *  2♦ 3♦ 4♦ 5♦ 6♦ 7♦ 8♦ 9♦ 10♦ J♦ Q♦ K♦ A♦
+ *  2♥ 3♥ 4♥ 5♥ 6♥ 7♥ 8♥ 9♥ 10♥ J♥ Q♥ K♥ A♥
+ *  2♠ 3♠ 4♠ 5♠ 6♠ 7♠ 8♠ 9♠ 10♠ J♠ Q♠ K♠ A♠
+ *
  * @author alexis.yang
- * @date 2020/3/31 5:03 PM
- * @copyright https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Knuth.java.html
+ * @since  2020/3/31 5:03 PM
  */
 public class KnuthShuffle {
 
@@ -30,7 +38,7 @@ public class KnuthShuffle {
      * 对Object数组中的元素均匀地洗牌
      * @param a the array to be shuffled
      */
-    public static  void shuffleAltinate(Object[] a) {
+    public static  void shuffleAlternate(Object[] a) {
         int n = a.length;
         for (int i = 0; i < n; i++) {
             // choose index uniformly in [i, n-1]
@@ -42,13 +50,14 @@ public class KnuthShuffle {
     }
 
     public static void main(String[] args) {
-        String[] a = {"hello", "world", "alexis", "good", "morning"};
+//        String[] a = {"hello", "world", "alexis", "good", "morning"};
+        String[] a = {"5♦", "6♦", "7♦", "10♥", "J♥", "Q♥", "K♥", "A♥"};
         KnuthShuffle.shuffle(a);
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
         System.out.println();
-        KnuthShuffle.shuffleAltinate(a);
+        KnuthShuffle.shuffleAlternate(a);
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
